@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+
+  frontend:
+    build: ./services/frontend
+    volumes:
+      - './services/frontend:/app'
+      - '/app/node_modules'
+    ports:
+      - 3000:3000
+
+  backend:
+    build: ./services/backend
+    volumes:
+      - './services/backend:/app'
+      - '/app/node_modules'
+    ports:
+      - 8080:8080

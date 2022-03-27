@@ -8,8 +8,10 @@ module.exports = {
     'eslint:recommended',
     '@vue/eslint-config-prettier',
   ],
+  plugins: ['jest'],
   env: {
     'vue/setup-compiler-macros': true,
+    'jest/globals': true,
   },
   rules: {
     'prettier/prettier': [
